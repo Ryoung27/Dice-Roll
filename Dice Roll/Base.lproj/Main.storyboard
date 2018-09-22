@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +12,76 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dice_Roll" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="table" translatesAutoresizingMaskIntoConstraints="NO" id="WOe-1F-H8m">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="i8e-gG-7nu">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Sum is: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9EK-AS-gZg">
+                                        <rect key="frame" x="140.5" y="0.0" width="94" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="0Oi-HX-LYb">
+                                        <rect key="frame" x="68.5" y="70.5" width="238" height="98"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice1" translatesAutoresizingMaskIntoConstraints="NO" id="e06-UN-Eh5">
+                                                <rect key="frame" x="0.0" y="0.0" width="99" height="98"/>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Dice5" translatesAutoresizingMaskIntoConstraints="NO" id="WkI-JL-BY6">
+                                                <rect key="frame" x="139" y="0.0" width="99" height="98"/>
+                                            </imageView>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HBB-Pw-vAH">
+                                        <rect key="frame" x="156.5" y="218.5" width="62" height="448.5"/>
+                                        <state key="normal" title="Roll" image="Roll"/>
+                                        <connections>
+                                            <action selector="buttonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pW5-7I-6Ur"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="i8e-gG-7nu" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8LG-M1-dxt"/>
+                            <constraint firstItem="i8e-gG-7nu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="DXY-jc-irR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="i8e-gG-7nu" secondAttribute="trailing" id="Lf5-4a-opD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WOe-1F-H8m" secondAttribute="trailing" id="OvS-mi-4Ml"/>
+                            <constraint firstItem="i8e-gG-7nu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Qk9-Aj-icm"/>
+                            <constraint firstItem="WOe-1F-H8m" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tl8-fK-Ufm"/>
+                            <constraint firstAttribute="bottom" secondItem="i8e-gG-7nu" secondAttribute="bottom" id="UZI-pu-c0d"/>
+                            <constraint firstAttribute="trailing" secondItem="i8e-gG-7nu" secondAttribute="trailing" id="e6O-VP-iaC"/>
+                            <constraint firstItem="i8e-gG-7nu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="j7b-wS-4TU"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="WOe-1F-H8m" secondAttribute="bottom" id="kpM-Bk-w1N"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="i8e-gG-7nu" secondAttribute="bottom" id="w0a-sP-vw3"/>
+                            <constraint firstItem="WOe-1F-H8m" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yLD-N3-dAT"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="9EK-AS-gZg" id="12e-O1-E9b"/>
+                        <outlet property="leftImageView" destination="e06-UN-Eh5" id="wBH-O1-qiE"/>
+                        <outlet property="rightImageView" destination="WkI-JL-BY6" id="Jje-rI-cBO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Dice1" width="99" height="98"/>
+        <image name="Dice5" width="99" height="98"/>
+        <image name="Roll" width="32" height="32"/>
+        <image name="table" width="414" height="736"/>
+    </resources>
 </document>
